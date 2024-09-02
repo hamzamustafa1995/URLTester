@@ -1,0 +1,52 @@
+﻿@page
+@model URLTester.API.Pages.IndexModel
+@{
+}
+<h2>Hello, Razor Page!</h2>
+<mini-profiler />
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>All URLs</title>
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css">
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css">
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
+    <script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.5.2/js/bootstrap.min.js"></script>
+    <script src="https://code.jquery.com/jquery-3.6.0.min.js"></script>
+
+    <script src="/scripts/request.js"></script>
+    <style>
+    </style>
+</head>
+<body>
+    <div class="container mt-5">
+        <h1>Dynamic Table To Get APis</h1>
+        <div class="form-group">
+            <label for="url">URL:</label>
+            <input type="text" class="form-control" id="url" />
+        </div>
+        <div class="form-group">
+            <label for="method">Method:</label>
+            <input type="text" class="form-control" id="method" value="GET" />
+        </div>
+        <div class="form-group">
+            <label for="data">Data (JSON):</label>
+            <textarea class="form-control" id="data"></textarea>
+        </div>
+        <div class="form-group">
+            <label for="token">Token:</label>
+            <input type="text" class="form-control" id="token" />
+        </div>
+        <button class="btn btn-primary" id="sendRequestButton">Send Request</button>
+
+        <div class="container">
+            <div id="tableContainer">
+            </div>
+        </div>
+    </div>
+</body>
+</html>
+<script src="https://code.jquery.com/jquery-3.5.1.min.js"></script>
